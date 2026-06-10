@@ -4,6 +4,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // 部署到 GitHub Pages 时的 base 路径
+  base: '/GYM-app/',
   plugins: [
     vue(),
     VitePWA({
@@ -18,20 +20,20 @@ export default defineConfig({
         background_color: '#1a1a2e',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        start_url: '/GYM-app/',
         icons: [
           {
-            src: 'icon.svg',
+            src: '/GYM-app/icon.svg',
             sizes: '192x192',
             type: 'image/svg+xml'
           },
           {
-            src: 'icon.svg',
+            src: '/GYM-app/icon.svg',
             sizes: '512x512',
             type: 'image/svg+xml'
           },
           {
-            src: 'icon.svg',
+            src: '/GYM-app/icon.svg',
             sizes: '512x512',
             type: 'image/svg+xml',
             purpose: 'any maskable'
